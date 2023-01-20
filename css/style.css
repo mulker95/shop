@@ -1,0 +1,369 @@
+/* HEADER */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('assets/fonts/Avenir.ttc/Avenir.ttc');
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Pro Bk';
+  src: url('assets/fonts/ITC Avant Garde Gothic Pro/ITC Avant Garde Gothic Pro/ITCAvantGardePro-Bk.otf');
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Pro Bold';
+  src: url('assets/fonts/ITC Avant Garde Gothic Pro/ITC Avant Garde Gothic Pro/ITCAvantGardePro-Bold.otf');
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Pro Demi';
+  src: url('assets/fonts/ITC Avant Garde Gothic Pro/ITC Avant Garde Gothic Pro/ITCAvantGardePro-Demi.otf');
+}
+
+* {
+  font-family: 'Avenir';
+}
+
+h1 {
+  font-family: 'ITCAvantGardePro-Bk';
+}
+
+
+.container {
+
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0px;
+
+}
+/*START PRODUCTS */
+
+
+.product-container {
+  height: 100%;
+  justify-content: left;
+  padding: 0 5vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+
+.product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.product-info {
+  width: 100%;
+  height: 100px;
+
+}
+
+.product-brand {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+
+
+
+.price {
+  justify-content: left !important;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+
+
+
+/* END PRODUCT */
+
+/* START PRODUCT SLIDER */
+
+
+.nxt-btn {
+  right: 3% !important;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  /* height: 100%; */
+  position: absolute;
+  top: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 1% !important;
+
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+/* END PRODUCT SLIDER */
+
+/* START COLOR CHANGERS */
+
+.colors {
+  display: flex;
+  margin-top: 8px;
+}
+
+.color {
+  height: 10px;
+  width: 10px;
+  margin-left: 0.5em;
+  border-radius: 18px;
+
+  border: 2px solid #aaa;
+  cursor: pointer;
+}
+
+/* FINISH COLOR CHANGERS */
+
+
+/* START RIGHT AND LEFT SIDE */
+
+.left {
+  height: 100%;
+  width: 50%;
+  background-image: url("../images/bg.png");
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.right {
+  width: 50%;
+  height: 100%;
+}
+
+/* FINISH RIGHT AND LEFT SIDE */
+
+
+/* START TEXT AND HEADERS */
+
+.headers {
+  width: 60%;
+  padding: 0 5vw;
+  margin-top: 5%;
+}
+
+.headers * {
+  margin-top: 15px !important;
+  margin-bottom: 30px !important;
+}
+
+.header1 {
+  font-family: 'ITC Avant Garde Pro Bold';
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 130%;
+
+}
+
+.header2 {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #666666
+}
+
+.header3 {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12.8px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  text-underline-offset: 8px;
+  text-decoration: underline;
+  margin-bottom: 45px;
+}
+
+/* FINISH TEXT AND HEADERS */
+
+.bottom-product-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color:hover {
+  border-color: #ff7d7d;
+  height: 12px;
+  width: 12px;
+  transition: 0.2s;
+}
+
+
+@media screen and (max-width: 600px) {
+  .left {
+
+    width: 100%;
+    position: absolute;
+    height: 60%;
+    background-image: url("../images/bg.png");
+    background-size: 100% 110%;
+    z-index: -1;
+  }
+  .right {
+    width: 100%;
+    margin-top: 35%;
+
+
+  }
+
+  .container {
+
+    flex-direction: column;
+  }
+ 
+
+  .headers {
+    color: white;
+    width: 100%;
+    font-style: normal;
+    line-height: 130%;
+
+  }
+
+  .headers {
+    width: 100%;
+    padding: 0 5vw;
+    /* margin-top: 5%; */
+  }
+
+  .headers * {
+    margin-top: 0px !important;
+    margin-bottom: -25px !important;
+  }
+
+
+  .header1 {
+    font-family: 'ITCAvantGardePro-Bk';
+    font-weight: 900;
+    width: 80%;
+    font-size: 20px;
+    color: rgb(255, 254, 254);
+    margin-top: 90px !important;
+    margin-bottom: 20px !important;
+    text-shadow: 1px 1px #929090;
+  }
+
+  .header2 {
+    display: none;
+  }
+
+  .bottom-product-card {
+    flex-direction: column;
+
+  }
+
+  .product-image {
+    height: 150px;
+    width: 200px;
+  }
+
+  .color:first-child {
+    margin-left: 0px;
+  }
+
+  .product-card {
+    width: 100px;
+  }
+
+  .product-image {
+    width: 130px;
+  }
+
+ 
+
+  .product-container {
+    height: unset;
+  }
+
+  button {
+    visibility: hidden;
+  }
+
+  .price {
+    font-size: smaller;
+  }
+
+  * {
+    margin: unset;
+    padding: unset;
+  }
+}
